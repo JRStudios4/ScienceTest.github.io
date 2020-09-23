@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 16.666666666666667%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+#Home {
+height:150%;
+}
+#News {
+height:150%;
+}
+#Contact {
+height:150%;
+}
+#Home {background-color: red;}
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+#Feedback{background-color: lightblue;}
+#Tutorials{background-color: purple;}
+#Credits{background-color: lightgreen;}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">News</button>
+<button class="tablink" onclick="openPage('News', this, 'green')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Games</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<button class="tablink" onclick="openPage('Feedback',this,'lightblue')">Feed</button>
+<button class="tablink" onclick="openPage('Tutorials',this,'purple')">Tutorials</button>
+
+<div id="Home" class="tabcontent">
+  
+  
+  <h3>News</h3>
+  <p>This is where we will post the news. As you can probably tell from the title, this is where you will be notified of games, or other news, such as updates, or notifications.  </p>
+  <p>9/22/2020</p>
+  <p>It has happened, the JRStudios webpage is finnaly out! This webpage will keep you up to date with frequent updates! You will be notified of games, get tutorials, and get demos before the games are even out! There will be a bigger update every month or so, we are constantly debugging, and we work on the quality of this website often!</p>
+  <p>NOTE: we would give bigger updates more often, but we have to work on the code. We are working on updates every day, but it takes a lot to make a website.</p>
+</div>
+
+<div id="News" class="tabcontent">
+ 
+  
+   <h3>Home</h3>
+  <p>This is the home, where you can find all the info on what you want to know, this is where you can find notifications on when bigger updates will happen,where you will find demos that we will post for <em>only one day</em> before they are made unavailable until the games are realesed. That means you might be the only person to see the demo. It takes a really long time to make games!
+  
+  
+  
+  
+</div>
+
+<div id="Contact" class="tabcontent"> 
+  <h3>Games</h3>
+<p>This is where we will be posting our games. I know, you are probably like, "Isn't that what the news does?", but actually, that is where we will be notifying you that the games are out, not where we will post links. </p>
+<p>A message from the develpoer</p>
+<p>We will soon be adding a way to search through games, for your convenince, because it might be agonizing scroling through games once we create more games.</p>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h3>Search Menu</h3>
+
+<p>Search inside the box. If it has been deleted, then it will show up, but it will have a ".delete" at the end. If it is a game and not a demo that has been deleted, then tell us in the feedback.</p>
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search" title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="file:///Users/joannework/Desktop/Joey's%20Projects/Ditto!.html">Ditto! Graphic</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript.delete</a></li>
+      <li><a href="#">PHP</a></li>
+      <li><a href="#">Python</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">SQL</a></li>
+      <li><a href="#">Bootstrap</a></li>
+      <li><a href="#">Node.js</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>JRStudios is a game developer that uses JavaScript, which is a programming language that, as you can probalby tell, is used to create games. JRStudios also uses HTML, which is used to create webpages,  Node.js, which is used to create server side JavaScript, and SQL, which is used to store server side data, creating a place to put all of the data that it takes to make a webpage.You will see a tutorial to all of these in the <strong>Tutorials</strong> tab. </p>
+  <button class="tablink" onclick="openPage('Credits',this,'lightorange')">Credits</button>
+  </div>
+  
+  <div id = "Credits" class ="tabcontent">
+  <h3>Credits</h3>
+  
+  <p>Khan Acadamey, for teaching me JavaScript, SQL, and HTML.</p>
+  <p>Mom, for giving me coding classes.</p>
+  <p>Holly, for sitting by me while I work.</p>
+  <p>Bri and Buster, for being loyal to me even though I paid them little attention.</p>
+  <p>w3schools, for teaching me how to put JavaScript in HTML, also tought me the menu at the top, which was very important.</p>
+  
+  <button class="tablink" onclick="openPage('About',this,'lightorange')">Back</button>
+  </div>
+  
+  <div id = "Feedback" class = "tabcontent"><h3>Feedback</h3>
+  <p>We always like it when you give us feedback, either good or bad. It shows us what to improve, and what to keep. Once a month we will give you the choice to vote at an update and we will decide, based on feedback and our opinions, which update to go on with.</p>
+  
+  <label class="container">Good Feedback
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Bad Feedback
+  <input type="checkbox">
+  <p>If you have seen a bug, or just have a reccomendation or feedback, please type in here.</p>
+<input placeholder="Feedback" oninput="this.className = ''" class="">
+
+<input placeholder="Recomendation" oninput="this.className = ''" class=""></div>
+
+<div id = "Tutorials" class="tabcontent"><h3>Tutorials</h3>
+<p>This is where we teach you computer programming.</p>
+  <h4>Javascript</h4>
+  <p>The frist thing you want to do is see if your computer has javascript. If it does, then you can go to the next step. The second thing you want to do is find a code translator, so you can see the result. If you have all of these, then you can start programming.</p>
+  
+  <h4>Basic Shapes</h4>
+  
+  <p>Ok, lets get started. Open up your code editor, and we will start.</p>
+  <p>The first thing we will learn is how to draw a circle. To draw a circle, type the command <code>ellipse</code>, and make sure it is lowercase.</p>
+  <p>Didn't work, did it? well that is because we didn't type in enough information. Now try typing <code>ellipse(200,200,20,20);</code>if you have a 400x400 canvas, then a circle should appear in the middle of the screen. If it still didn't work, check your spelling and make sure it is lowercase.</p></div>
+  
+  <div id = "production" class = "ERR">
+  <h1>Error<h1>
+  <p>Sorry, but this page is being updated. This shouldn't take very long. Check back in a couple hours.</p>
+  
+  </div>
+  
+  
+  
+  
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+
+   
+</body>
